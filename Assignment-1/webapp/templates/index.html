@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSc 8830: CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .sub-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .card {
+            width: 400px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 200px;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        .btn-secondary {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1e87dc;
+        }
+
+        .btn-tertiary {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .btn-tertiary:hover {
+            background-color: #d32f2f;
+        }
+
+        .upload-btn:focus,
+        .upload-btn:active,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-secondary:focus,
+        .btn-secondary:active,
+        .btn-tertiary:focus,
+        .btn-tertiary:active {
+            outline: none;
+        }
+
+        .inputfile {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+            /* background-color: #4CAF50;
+            color: white; */
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-label:hover {
+            background-color: #e5e5e1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">CSc 8830: Computer Vision</h1>
+    <div class="container">
+        <h1 class="sub-title">Teja Krishna Cherukuri (002763290)</h1>
+        <div class="card">
+            <h3 class="header">Assignment 1: Find Real-world Dimensions</h3>
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" class="upload-form">
+                <input type="file" name="file" id="file" class="inputfile">
+                <label for="file" class="file-label">Choose a file</label>
+                <button type="submit" class="btn btn-primary">Compute Diameter</button>
+            </form>
+        </div>
+        <!-- <div class="card">
+            <h3 class="header">Assignment 2</h3>
+            <a href="#" class="btn btn-secondary">Another Assignment</a>
+        </div>
+        <div class="card">
+            <h3 class="header">Assignment 3</h3>
+            <a href="#" class="btn btn-tertiary">Yet Another Assignment</a>
+        </div> -->
+    </div>
+</body>
+</html>
