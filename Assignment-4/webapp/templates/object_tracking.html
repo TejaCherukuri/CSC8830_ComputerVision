@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="header">Object Tracking, Recognition & Dimensions Calculation</h1>
+    <h3 class="header">Teja Krishna Cherukuri, 002763290</h3>
+    <div class="container">
+        <div class="id=video-container">
+            <img src="{{ url_for('stream_video') }}" width="1080" height="640" class="result-img">
+        </div>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Return to Home</a>
+    </div>
+</body>
+</html>
